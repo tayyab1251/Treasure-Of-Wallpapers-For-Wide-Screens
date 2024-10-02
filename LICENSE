@@ -1,0 +1,13 @@
+
+---
+
+### Steps to Implement:
+1. **Create a new `assets/` folder**:
+   - Move all the wallpaper folders into `assets/wallpapers/`.
+   - Add any icons for the website (if needed) into `assets/icons/`.
+
+2. **Update the paths in your `index.html`, `script.js`, and `styles.css`** to reflect the new structure.
+
+3. **Push the changes to GitHub** and deploy the website on Vercel.
+
+This will keep the website well-organized, maintainable, and interactive! Let me know if you need further adjustments or any help with deployment.
