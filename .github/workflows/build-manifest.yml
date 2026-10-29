@@ -1,0 +1,41 @@
+name: Build thumbnails and manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/wallpapers/**'
+      - 'data/meta.json'
+      - 'scripts/**'
+      - 'package.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-manifest
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so "added" dates are correct
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-audit --no-fund
+      - run: npm run build
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/thumbs data/wallpapers.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update thumbnails and manifest [skip ci]"
+          git push
+      - name: Refresh jsDelivr cache for the manifest (best effort)
+        run: curl -fsS "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/data/wallpapers.json" || true

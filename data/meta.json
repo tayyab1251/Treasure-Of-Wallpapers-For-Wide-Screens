@@ -1,0 +1,5 @@
+{
+  "_readme": "Optional hand-written info. Keys starting with _ are ignored. A key ending in / is a folder default, any other key is a file path relative to assets/wallpapers. Fields: title, tags, author, source, license, hidden.",
+  "_example/": { "author": "Example Folder Author", "source": "https://example.com", "license": "CC0" },
+  "_example/file.png": { "title": "Nice Title", "tags": ["nord", "minimal"], "author": "Jane", "source": "https://example.com/post/1", "license": "CC BY 4.0" }
+}
