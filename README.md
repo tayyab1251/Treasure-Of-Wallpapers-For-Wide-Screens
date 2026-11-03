@@ -8,7 +8,7 @@ This repository contains nearly 600 high-quality wallpapers, perfect for wide sc
 
 Explore the live site to preview and download wallpapers:
 
-🌐 **[WallZilla Website](https://wallzilla.vercel.app/)**
+🌐 **[WallZilla Website](https://wallzilla.tayyub.me/)**
 
 ## Features
 
@@ -21,7 +21,7 @@ Explore the live site to preview and download wallpapers:
 
 There are two ways to download the wallpapers:
 
-1. **From the Website**: Visit the [WallZilla website](https://wallzilla.vercel.app/) to browse and download.
+1. **From the Website**: Visit the [WallZilla website](https://wallzilla.tayyub.me/) to browse and download.
 2. **From GitHub**: 
     - Navigate to the `assets/wallpapers/` folder.
     - Browse through the categories, select a wallpaper, and click "Download."
